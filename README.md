@@ -11,38 +11,34 @@
 - [Contacto](#Contacto)
 
 ## Descripción
-XXXX Este proyecto analiza un conjunto de datos históricos de ventas de videojuegos para comprender las preferencias de los consumidores, identificar tendencias por plataforma, región y género, y generar recomendaciones para estrategias de mercado en la industria del entretenimiento.
+La compañía minera OilyGiant busca determinar la región más rentable para un nuevo pozo petrolero a partir de datos de crudo y parámetros de pozos en tres zonas. Se desarrolló un modelo de machine learning para evaluar riesgos y beneficios potenciales, ayudando a seleccionar la región con mayor margen de beneficio para optimizar la inversión.
 
 ## Datos
-Se utilizaron XXX conjuntos de datos principales:  
-- XXXX **games.csv**: Contiene registros de ventas por juego, plataforma, año, y regiones (Norteamérica, Europa, Japón, y resto del mundo).  
-- XXXX **scraping.csv**: Dataset auxiliar para completar datos faltantes.  
-
-Características clave incluyen:  
-- XXXX 16,500 registros históricos.  
-- XXXX Variables: nombre, plataforma, año, género, clasificación ESRB, ventas por región, calificaciones de críticos y usuarios.  
-- XXXX Datos limpios y normalizados para análisis.  
+Se utilizaron 3 conjuntos de datos principales:  
+- **geo_data_0.csv.csv**: Tabla con 100,000 registros de pozos petroleros, con ID único, tres características y volumen de reservas en miles de barriles.
+- **geo_data_1.csv.csv**: Tabla con 100,000 registros de pozos petroleros, con ID único, tres características y volumen de reservas en miles de barriles.
+- **geo_data_2.csv.csv**: Tabla con 100,000 registros de pozos petroleros, con ID único, tres características y volumen de reservas en miles de barriles.
 
 ## Análisis
-El enfoque incluyó:  
-- XXXX Análisis exploratorio para identificar tendencias de ventas por región y género.  
-- XXXX Visualizaciones para descubrir patrones.  
-- XXXX Modelado predictivo simple para estimar ventas futuras basado en variables históricas.  
-- XXXX Validación cruzada para evaluar modelos.  
+- Se recolectaron parámetros relevantes como calidad del petróleo y volumen de reservas en tres regiones.
+- Se entrenaron modelos de regresión independientes para cada región con datos limpios y sin valores faltantes (100,000 observaciones por zona).
+- Validación del modelo mostró buena precisión en la zona B (RECM 0.89), mientras que las zonas A y C presentan margen de mejora (RECM ~40).
+- Evaluación estadística avanzada con cálculo de medias, medianas y puntos de equilibrio para identificar zonas prometedoras.
+- Análisis de intervalos de confianza y evaluación de riesgos para la selección definitiva de pozos con mayor producción proyectada.
 
 ## Tecnologías y herramientas
-- XXXX Python 3.9  
-- XXXX Pandas, NumPy para manipulación de datos  
-- XXXX Matplotlib, Seaborn para visualización  
-- XXXX Scikit-learn para modelado predictivo  
-- XXXX Jupyter Notebook para desarrollo interactivo  
+- Python 3.9
+- Pandas y NumPy para manipulación y análisis de datos
+- SciPy para funciones estadísticas avanzadas
+- Scikit-learn para modelado predictivo y evaluación
+- Jupyter Notebook para desarrollo interactivo
 
 ## Resultados
-- XXXX Los géneros Action y Sports lideran ventas globales.  
-- XXXX Norteamérica y Europa son los mercados con mayor volumen.  
-- XXXX Modelos predictivos lograron un R2 medio de 0.75 en test set.  
-- XXXX Recomendaciones para enfocar nuevos lanzamientos en plataformas con crecimiento positivo.  
-
+- La zona A mostró la mayor rentabilidad promedio con 163.22 unidades producidas por pozo y un beneficio bruto aproximado de $46.9 millones USD (margen 31.93%).
+- La zona B destacó en la evaluación de riesgos, con un intervalo de confianza del 95% entre $395,594 y $8.27 millones USD y un riesgo bajo del 1.4%.
+- Se identificaron más de 36,000 puntos en zonas A y C con potencial para alcanzar el punto de equilibrio.
+- Selección final basada en las 200 mejores predicciones por región para maximizar beneficios y minimizar riesgos.
+ 
 ## Contribuciones
 Bienvenidas sugerencias, correcciones y nuevas visualizaciones. Por favor, abre un issue o pull request para colaborar.
 
